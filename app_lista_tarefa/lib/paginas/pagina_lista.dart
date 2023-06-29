@@ -16,6 +16,7 @@ class pagina_lista extends StatelessWidget {
                 hintText: "Digite aqui"),
             ),
           ),
+          SizedBox(width: 8),
           ElevatedButton(onPressed: () {}, child: Text(" + "))
         ],
        ),
