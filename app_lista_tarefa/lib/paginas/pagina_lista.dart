@@ -6,24 +6,19 @@ class pagina_lista extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        //padding é para obter margens na sua caixa de texto
-        child: Padding(
-          padding: const EdgeInsets.all(100),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                  controller: email_controle,
-                  decoration: InputDecoration(
-                  labelText: 'Email',
-                ),
-              ),
-              ElevatedButton(onPressed: entrar, 
-              child: Text("entrar")
-              ),
-            ],
+       child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "Adicione uma tarefa",
+                hintText: "Digite aqui"),
+            ),
           ),
-        ),
+          ElevatedButton(onPressed: () {}, child: Text(" + "))
+        ],
+       ),
       ),
     );
   }
